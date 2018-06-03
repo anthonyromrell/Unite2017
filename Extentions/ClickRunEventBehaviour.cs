@@ -1,7 +1,6 @@
 ﻿using RoboRyanTron.Unite2017.Events;
 using UnityEngine;
 
-
 namespace AR.Events
 {
     public class ClickRunEventBehaviour : MonoBehaviour
@@ -13,6 +12,4 @@ namespace AR.Events
             Event.Raise();
         }
     }
-
 }
-

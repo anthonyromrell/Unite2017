@@ -12,12 +12,11 @@ namespace RoboRyanTron.Unite2017.Variables
 {
     public class TextReplacer : MonoBehaviour
     {
+        public bool AlwaysUpdate;
         public Text Text;
 
         public StringVariable Variable;
 
-        public bool AlwaysUpdate;
-        
         private void OnEnable()
         {
             Text.text = Variable.Value;
@@ -25,10 +24,7 @@ namespace RoboRyanTron.Unite2017.Variables
 
         private void Update()
         {
-            if (AlwaysUpdate)
-            {
-                Text.text = Variable.Value;
-            }
+            if (AlwaysUpdate) Text.text = Variable.Value;
         }
     }
 }

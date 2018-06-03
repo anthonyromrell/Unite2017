@@ -12,12 +12,12 @@ namespace RoboRyanTron.Unite2017.Variables
 {
     public class UnitHealth : MonoBehaviour
     {
+        public UnityEvent DamageEvent;
+        public UnityEvent DeathEvent;
         public FloatVariable HP;
 
         public bool ResetHP;
         public FloatReference StartingHP;
-        public UnityEvent DamageEvent;
-        public UnityEvent DeathEvent;
 
         private void Start()
         {
@@ -27,17 +27,14 @@ namespace RoboRyanTron.Unite2017.Variables
 
         private void OnTriggerEnter(Collider other)
         {
-            DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
+            var damage = other.gameObject.GetComponent<DamageDealer>();
             if (damage != null)
             {
                 HP.ApplyChange(-damage.DamageAmount);
                 DamageEvent.Invoke();
             }
 
-            if (HP.Value <= 0.0f)
-            {
-                DeathEvent.Invoke();
-            }
+            if (HP.Value <= 0.0f) DeathEvent.Invoke();
         }
     }
 }

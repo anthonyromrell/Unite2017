@@ -12,8 +12,7 @@ namespace RoboRyanTron.Unite2017.Variables
     [CreateAssetMenu]
     public class StringVariable : ScriptableObject
     {
-        [SerializeField]
-        private string value = "";
+        [SerializeField] private string value = "";
 
         public string Value
         {

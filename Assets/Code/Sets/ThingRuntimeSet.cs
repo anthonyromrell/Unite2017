@@ -11,5 +11,6 @@ namespace RoboRyanTron.Unite2017.Sets
 {
     [CreateAssetMenu]
     public class ThingRuntimeSet : RuntimeSet<Thing>
-    {}
+    {
+    }
 }

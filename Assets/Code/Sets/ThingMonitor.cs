@@ -12,11 +12,10 @@ namespace RoboRyanTron.Unite2017.Sets
 {
     public class ThingMonitor : MonoBehaviour
     {
+        private int previousCount = -1;
         public ThingRuntimeSet Set;
 
         public Text Text;
-
-        private int previousCount = -1;
 
         private void OnEnable()
         {

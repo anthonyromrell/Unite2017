@@ -12,12 +12,13 @@ namespace RoboRyanTron.Unite2017.Variables
     [Serializable]
     public class FloatReference
     {
-        public bool UseConstant = true;
         public float ConstantValue;
+        public bool UseConstant = true;
         public FloatVariable Variable;
 
         public FloatReference()
-        { }
+        {
+        }
 
         public FloatReference(float value)
         {

@@ -25,7 +25,7 @@ namespace RoboRyanTron.Unite2017.Variables
 
         private void OnTriggerEnter(Collider other)
         {
-            DamageDealer damage = other.gameObject.GetComponent<DamageDealer>();
+            var damage = other.gameObject.GetComponent<DamageDealer>();
             if (damage != null)
                 HP.ApplyChange(-damage.DamageAmount);
         }

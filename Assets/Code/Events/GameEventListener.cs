@@ -12,8 +12,7 @@ namespace RoboRyanTron.Unite2017.Events
 {
     public class GameEventListener : MonoBehaviour
     {
-        [Tooltip("Event to register with.")]
-        public GameEvent Event;
+        [Tooltip("Event to register with.")] public GameEvent Event;
 
         [Tooltip("Response to invoke when Event is raised.")]
         public UnityEvent Response;
